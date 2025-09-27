@@ -551,15 +551,85 @@
   </style>
   <style>
     /* Stands */
-    .stand-card{border:1px solid #eef0f4;border-radius:14px;padding:1rem 1rem 0.9rem;background:#fff;
-      box-shadow:0 6px 18px rgba(16,24,40,.06);height:100%}
-    .stand-title{font-weight:800;margin:0 0 .25rem}
-    .stand-badges{display:flex;gap:.5rem;flex-wrap:wrap;margin:.35rem 0 .25rem}
-    .badge-soft{background:#f3f4f6;border:1px solid #e5e7eb;color:#111;font-weight:700;border-radius:999px;padding:.25rem .6rem;font-size:.75rem}
-    .badge-blue{background:#0C0096;color:#fff}
-    .badge-orange{background:#C7451B;color:#fff}
-    .stand-sub{margin:.5rem 0 0;padding-left:1rem}
-    .stand-sub li{margin:.15rem 0}
+    .stand-card {
+      border: 1px solid #eef0f4;
+      border-radius: 14px;
+      padding: 1rem 1rem 0.9rem;
+      background: #fff;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, .06);
+      height: 100%
+    }
+
+    .stand-title {
+      font-weight: 800;
+      margin: 0 0 .25rem
+    }
+
+    .stand-badges {
+      display: flex;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin: .35rem 0 .25rem
+    }
+
+    .badge-soft {
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      color: #111;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: .25rem .6rem;
+      font-size: .75rem
+    }
+
+    .badge-blue {
+      background: #0C0096;
+      color: #fff
+    }
+
+    .badge-orange {
+      background: #C7451B;
+      color: #fff
+    }
+
+    .stand-sub {
+      margin: .5rem 0 0;
+      padding-left: 1rem
+    }
+
+    .stand-sub li {
+      margin: .15rem 0
+    }
+
+    /* Intervenants */
+    .interv-card{border:1px solid #eef0f4;border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 8px 20px rgba(16,24,40,.06);height:100%}
+    .interv-photo{width:100%;height:300px;object-fit:cover;background:#f5f7fa}
+    .interv-body{padding:.85rem 1rem}
+    .interv-name{font-weight:800;margin:0 0 .15rem}
+    .interv-role{color:#6b7280;margin:0}
+    .avatar {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: .65rem;
+      background: #f3f4f6
+    }
+
+    .card.interv {
+      border: 1px solid #eef0f4;
+      border-radius: .85rem;
+      box-shadow: 0 8px 20px rgba(16, 24, 40, .06)
+    }
+
+    .card.interv .role {
+      color: #6b7280
+    }
+
+    #intervenantsFilter {
+      min-width: 260px
+    }
+
+
 
     header.hero {
       background: url('salon_business_celestial_network.jpg') center/cover no-repeat;
@@ -591,7 +661,7 @@
           <li class="nav-item"><a class="nav-link" href="#top">Accueil</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Info & contact</a></li>
           <li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
-          <li class="nav-item"><a class="nav-link" href="#participants">Participants</a></li>
+          <li class="nav-item"><a class="nav-link" href="#intervenants">Intervenants</a></li>
           <li class="nav-item"><a class="nav-link" href="#stands">Stands</a></li>
           <li class="nav-item ms-lg-3"><a class="btn btn-sm" href="#inscription">S’inscrire</a></li>
         </ul>
@@ -603,9 +673,6 @@
   <!-- Hero -->
   <header id="top" class="hero text-white">
     <div class="container">
-      <div class="d-flex justify-content-center gap-3">
-        <a href="#inscription" class="btn btn-lg btn-outline-light">Je m’inscris</a>
-      </div>
     </div>
   </header>
 
@@ -659,7 +726,7 @@
             réseau professionnel offre une plateforme d’échange, de partage, de collaboration et d’entraide.
           </p>
 
-          
+
           <div class="pill-card adult-block mt-4 mb-3">
             <p class="title mb-0">Un réseau d’entraide et de partage</p>
             <span class="icon" aria-hidden="true">
@@ -671,8 +738,10 @@
             </span>
           </div>
           <p class="text-muted">
-            Le salon business rassemble les talents de la communauté céleste pour une journée d’exposition, de transmission et de
-            partage. Venez découvrir un espace d’échange unique pour petits et grands, où tables rondes, témoignages, conférences,
+            Le salon business rassemble les talents de la communauté céleste pour une journée d’exposition, de
+            transmission et de
+            partage. Venez découvrir un espace d’échange unique pour petits et grands, où tables rondes, témoignages,
+            conférences,
             rencontres inattendues et plus encore, animeront le réseau de la communauté.
           </p>
 
@@ -709,26 +778,31 @@
     </div>
   </section>
 
-  <!-- Participants -->
-  <section id="participants" class="section">
+  <!-- INTERVENANTS -->
+  <section id="intervenants" class="section">
     <div class="container">
-      <h2 class="text-center fw-bold mb-2">Nos intervenants & participants</h2>
-      <p class="text-center text-muted mb-4">Découvrez les talents présents : métiers, secteurs et expertises.</p>
+      <h2 class="text-center fw-bold mb-2">Nos intervenants</h2>
+      <p class="text-center text-muted mb-4">Découvrez les intervenants et filtrez par secteur d’activité.</p>
+
       <div class="text-center mb-3">
-        <label for="sectorFilter" class="form-label me-2">Filtrer par secteur :</label>
-        <select id="sectorFilter" class="form-select d-inline-block">
+        <label for="intervenantsFilter" class="form-label me-2">Secteur :</label>
+        <select id="intervenantsFilter" class="form-select d-inline-block" style="width:auto">
           <option value="">Tous</option>
         </select>
       </div>
-      <div class="row" id="participantsGrid"></div>
+
+      <div class="row g-3" id="intervenantsGrid"></div>
     </div>
   </section>
 
+
+  <!-- Stands -->
   <section id="stands" class="section">
     <div class="container">
       <h2 class="fw-bold text-center mb-2">Stands</h2>
       <p class="text-center text-muted mb-4">
-        Retrouve les espaces thématiques du Salon Business : découvre des métiers, échange avec des pros, et explore des parcours inspirants.
+        Retrouve les espaces thématiques du Salon Business : découvre des métiers, échange avec des pros, et explore des
+        parcours inspirants.
       </p>
 
       <!-- Filtres simples (optionnels) -->
@@ -742,8 +816,7 @@
     </div>
   </section>
 
-
-
+  <!-- Inscription -->
   <section id="inscription">
     <div class="container">
       <div class="row g-4 align-items-start">
@@ -878,54 +951,6 @@
       }
     ];
 
-    const PARTICIPANTS = [
-      { "firstName": "Sourou", "lastName": "AGOSSOU", "job": "Directeur Administratif et Financier - Responsable Performance ERP Groupe", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "https://ui-avatars.com/api/?name=Sourou+AGOSSOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Samuelle", "lastName": "SINHOUNTO", "job": "Auditeur interne / externe / Contrôleur de gestion / Contrôleur financier / Analyste financier", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "https://ui-avatars.com/api/?name=Samuelle+SINHOUNTO&background=0C0096&color=fff&size=256" },
-      { "firstName": "Norris", "lastName": "HANKPE", "job": "Technicien climatisation", "sector": "Energie/Environnement", "photo": "https://ui-avatars.com/api/?name=Norris+HANKPE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Happy", "lastName": "ZOUNVEHA", "job": "Chargée de programmes", "sector": "Enseignement / Recherche/ Formation", "photo": "https://ui-avatars.com/api/?name=Happy+ZOUNVEHA&background=0C0096&color=fff&size=256" },
-      { "firstName": "Élie", "lastName": "SINHOUNTO", "job": "Consultant IT -  AMOA/ Gestion de projet", "sector": "Banque/Assurances", "photo": "https://ui-avatars.com/api/?name=%C3%89lie+SINHOUNTO&background=0C0096&color=fff&size=256" },
-      { "firstName": "Micheline", "lastName": "FETON", "job": "Chargée de clientèles / Conseillère Banque/Assurance", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "https://ui-avatars.com/api/?name=Micheline+FETON&background=0C0096&color=fff&size=256" },
-      { "firstName": "Monlourd", "lastName": "KOUTON", "job": "Financial controller", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "https://ui-avatars.com/api/?name=Monlourd+KOUTON&background=0C0096&color=fff&size=256" },
-      { "firstName": "TCHENG", "lastName": "KPOUNHOHOU", "job": "Consultant système d’information", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "https://ui-avatars.com/api/?name=TCHENG+KPOUNHOHOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Elie", "lastName": "ZOUNON", "job": "Mécanicien industriel", "sector": "Industrie", "photo": "https://ui-avatars.com/api/?name=Elie+ZOUNON&background=0C0096&color=fff&size=256" },
-      { "firstName": "Kossi", "lastName": "AHOUANVOEBLA", "job": "Sapeur pompier", "sector": "Sécurité", "photo": "https://ui-avatars.com/api/?name=Kossi+AHOUANVOEBLA&background=0C0096&color=fff&size=256" },
-      { "firstName": "Chahinez", "lastName": "DEHOUX", "job": "Infirmière auxiliaire de puériculture", "sector": "Santé/Social", "photo": "https://ui-avatars.com/api/?name=Chahinez+DEHOUX&background=0C0096&color=fff&size=256" },
-      { "firstName": "Lucille", "lastName": "AITHNATHAN", "job": "Infirmière", "sector": "Santé/Social", "photo": "https://ui-avatars.com/api/?name=Lucille+AITHNATHAN&background=0C0096&color=fff&size=256" },
-      { "firstName": "Sandra", "lastName": "FADEGBE", "job": "Aide soignante", "sector": "Santé/Social", "photo": "https://ui-avatars.com/api/?name=Sandra+FADEGBE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Edern", "lastName": "HERVOUET", "job": "Consultant en cybersécurité / ingénieur sécurité / Analyste SOC", "sector": "Numérique / IT ", "photo": "https://ui-avatars.com/api/?name=Edern+HERVOUET&background=0C0096&color=fff&size=256" },
-      { "firstName": "Cédric", "lastName": "TOITOT", "job": "Technicien informatique / Administrateur systèmes et réseaux", "sector": "Numérique / IT ", "photo": "https://ui-avatars.com/api/?name=C%C3%A9dric+TOITOT&background=0C0096&color=fff&size=256" },
-      { "firstName": "Mounir", "lastName": "BESSSI", "job": "STAGIAIRE ADMINISTRATEUR SYSTEME ET RÉSEAUX", "sector": "Numérique / IT ", "photo": "https://ui-avatars.com/api/?name=Mounir+BESSSI&background=0C0096&color=fff&size=256" },
-      { "firstName": "Sofia", "lastName": "BENHAMDOUN", "job": "Consultante en stratégie", "sector": "Communication/ Marketing/ Commerce", "photo": "https://ui-avatars.com/api/?name=Sofia+BENHAMDOUN&background=0C0096&color=fff&size=256" },
-      { "firstName": "Laure", "lastName": "KACOUTIE", "job": "Assistante commerciale", "sector": "Communication/ Marketing/ Commerce", "photo": "https://ui-avatars.com/api/?name=Laure+KACOUTIE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Gaelle", "lastName": "ALAYE", "job": "Assistante commerciale", "sector": "Communication/ Marketing/ Commerce", "photo": "https://ui-avatars.com/api/?name=Gaelle+ALAYE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Domitille", "lastName": "GOMIS", "job": "Chargée de marketing et communication", "sector": "Communication/ Marketing/ Commerce", "photo": "https://ui-avatars.com/api/?name=Domitille+GOMIS&background=0C0096&color=fff&size=256" },
-      { "firstName": "Stessy", "lastName": "KPEDE", "job": "Commerciale sédentaire", "sector": "Communication/ Marketing/ Commerce", "photo": "https://ui-avatars.com/api/?name=Stessy+KPEDE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Arielle", "lastName": "OLADELE", "job": "Community manager/ Graphiste", "sector": "Communication/ Marketing/ Commerce", "photo": "https://ui-avatars.com/api/?name=Arielle+OLADELE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Daphné", "lastName": "AKPACA", "job": "Entrepreneure : DAPHY STUDIOS (Coiffure, tresses) / Consultante en immigration", "sector": "Entrepreneuriat", "photo": "https://ui-avatars.com/api/?name=Daphn%C3%A9+AKPACA&background=0C0096&color=fff&size=256" },
-      { "firstName": "Joseph", "lastName": "GANDONOU", "job": "Entrepreneur : électricité / plomberie", "sector": "Entrepreneuriat", "photo": "https://ui-avatars.com/api/?name=Joseph+GANDONOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Océane", "lastName": "BAKPE", "job": "Entrepreneure : Océano Style (Mode) — communication visuelle & stylisme", "sector": "Entrepreneuriat", "photo": "https://ui-avatars.com/api/?name=Oc%C3%A9ane+BAKPE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Bryan", "lastName": "BAPTISTE", "job": "Entrepreneur : Joe et Bryan Events (événementiel)", "sector": "Entrepreneuriat", "photo": "https://ui-avatars.com/api/?name=Bryan+BAPTISTE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Sharon", "lastName": "GODOMEY", "job": "Design & Animation 3D", "sector": "Arts / Design / Mode", "photo": "https://ui-avatars.com/api/?name=Sharon+GODOMEY&background=0C0096&color=fff&size=256" },
-      { "firstName": "Hanniel", "lastName": "ODJO", "job": "Ingénieur en automatisme", "sector": "Service public / Education", "photo": "https://ui-avatars.com/api/?name=Hanniel+ODJO&background=0C0096&color=fff&size=256" },
-      { "firstName": "Golbert", "lastName": "AKPO", "job": "Enseignant — mathématiques", "sector": "Service public / Education", "photo": "https://ui-avatars.com/api/?name=Golbert+AKPO&background=0C0096&color=fff&size=256" },
-      { "firstName": "Albert", "lastName": "HOUSSOU", "job": "Enseignant — anglais", "sector": "Service public / Education", "photo": "https://ui-avatars.com/api/?name=Albert+HOUSSOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Jordan", "lastName": "SOSSOU", "job": "Opérateur de prises de vues / cadreur", "sector": "Audiovisuel", "photo": "https://ui-avatars.com/api/?name=Jordan+SOSSOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Chilon", "lastName": "KOUTON", "job": "Caméraman / monteur", "sector": "Audiovisuel", "photo": "https://ui-avatars.com/api/?name=Chilon+KOUTON&background=0C0096&color=fff&size=256" },
-      { "firstName": "Alban", "lastName": "AGBOKOU", "job": "Monteur vidéo", "sector": "Audiovisuel", "photo": "https://ui-avatars.com/api/?name=Alban+AGBOKOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Axel", "lastName": "AYADJI", "job": "Journaliste/présentateur radio", "sector": "Audiovisuel", "photo": "https://ui-avatars.com/api/?name=Axel+AYADJI&background=0C0096&color=fff&size=256" },
-      { "firstName": "Precious", "lastName": "THIANDJI", "job": "Journaliste/présentatrice TV", "sector": "Audiovisuel", "photo": "https://ui-avatars.com/api/?name=Precious+THIANDJI&background=0C0096&color=fff&size=256" },
-      { "firstName": "Jomar", "lastName": "TOUSSAINT", "job": "Rédacteur vidéos & monteur", "sector": "Audiovisuel", "photo": "https://ui-avatars.com/api/?name=Jomar+TOUSSAINT&background=0C0096&color=fff&size=256" },
-      { "firstName": "Gracia", "lastName": "KAUFOLO", "job": "Juriste d’entreprise", "sector": "Droit / Relations internationales", "photo": "https://ui-avatars.com/api/?name=Gracia+KAUFOLO&background=0C0096&color=fff&size=256" },
-      { "firstName": "Belinda", "lastName": "SAGBO", "job": "Assistante juridique", "sector": "Droit / Relations internationales", "photo": "https://ui-avatars.com/api/?name=Belinda+SAGBO&background=0C0096&color=fff&size=256" },
-      { "firstName": "Thibault", "lastName": "ABOLI", "job": "Juriste en droit des affaires", "sector": "Droit / Relations internationales", "photo": "https://ui-avatars.com/api/?name=Thibault+ABOLI&background=0C0096&color=fff&size=256" },
-      { "firstName": "Hosea", "lastName": "OWEREKONNE", "job": "Aide-soignant diplômé (BEPSS)", "sector": "Santé/Social", "photo": "https://ui-avatars.com/api/?name=Hosea+OWEREKONNE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Assitan", "lastName": "TRAORE", "job": "Esthéticienne", "sector": "Beauté / Esthétique", "photo": "https://ui-avatars.com/api/?name=Assitan+TRAORE&background=0C0096&color=fff&size=256" },
-      { "firstName": "Eglantine", "lastName": "KOUASSI", "job": "Esthéticienne", "sector": "Beauté / Esthétique", "photo": "https://ui-avatars.com/api/?name=Eglantine+KOUASSI&background=0C0096&color=fff&size=256" },
-      { "firstName": "Séphora", "lastName": "GANDONOU", "job": "Styliste culinaire / Pâtisserie — PePa’s cake", "sector": "Restauration / Art culinaire", "photo": "https://ui-avatars.com/api/?name=S%C3%A9phora+GANDONOU&background=0C0096&color=fff&size=256" },
-      { "firstName": "Naomi", "lastName": "GAWROSZ", "job": "Serveuse / Aide cuisinière", "sector": "Restauration / Art culinaire", "photo": "https://ui-avatars.com/api/?name=Naomi+GAWROSZ&background=0C0096&color=fff&size=256" }
-    ];
-
-
     // ===== Rendu Programme façon "tabs + accordéons" =====
     const tabsEl = document.getElementById('programTabs');
     const tabContentEl = document.getElementById('programTabContent');
@@ -987,37 +1012,13 @@
           </div>`;
       }).join('');
     }
-    // ===== Participants (inchangé) =====
-    const participantsGrid = document.getElementById('participantsGrid');
-    const sectorFilter = document.getElementById('sectorFilter');
-
-    function renderParticipants(sector = '') {
-      const list = sector ? PARTICIPANTS.filter(x => x.sector === sector) : PARTICIPANTS;
-      participantsGrid.innerHTML = list.map(x => `
-        <div class='col-6 col-md-4 col-lg-3 mb-4'>
-          <div class='card elev h-100 p-2'>
-            <img class='avatar mb-2' src='${x.photo || "https://picsum.photos/600/450"}' alt='${x.firstName} ${x.lastName}'>
-            <div class='px-1 pb-2'>
-              <strong>${x.firstName} ${x.lastName}</strong>
-              <p class='mb-1'>${x.job}</p>
-              <small class='text-muted'>${x.sector}</small>
-            </div>
-          </div>
-        </div>`).join('');
-    }
-    function renderSectors() {
-      const sectors = [...new Set(PARTICIPANTS.map(x => x.sector))];
-      sectors.forEach(s => { const opt = document.createElement('option'); opt.value = s; opt.textContent = s; sectorFilter.appendChild(opt) });
-    }
 
     // ===== Init =====
     renderProgramTabs();
     renderProgramPanels();
 
     renderSectors();
-    renderParticipants();
 
-    sectorFilter?.addEventListener('change', e => renderParticipants(e.target.value));
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // ===== Countdown jusqu'à l'évènement =====
@@ -1041,6 +1042,143 @@
     tick();
     setInterval(tick, 1000);
   </script>
+
+  <script>
+    /* ===== Intervenants issus de "Liste Intervenants 3ème édition.xlsx" ===== */
+    const INTERVENANTS = [
+        { "fullName": "Sourou AGOSSOU", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Sourou AGOSSOU.jpeg" },
+        { "fullName": "Samuelle SINHOUNTO", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samuelle SINHOUNTO.jpeg" },
+        { "fullName": "Norris HANKPE", "sector": "BTP, Industries, Energie", "photo": "photos/Norris HANKPE.jpeg" },
+        { "fullName": "Happy ZOUNVEHA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Happy ZOUNVEHA.jpeg" },
+        { "fullName": "Élie SINHOUNTO", "sector": "Banque/Assurances", "photo": "photos/Elie SINHOUNTO.jpeg" },
+        { "fullName": "Gabriel ADETONAH", "sector": "Informatique/Télécoms", "photo": "photos/Gabriel ADETONAH.jpeg" },
+        { "fullName": "Regis MERCIER", "sector": "Informatique/Télécoms", "photo": "photos/Regis MERCIER.jpeg" },
+        { "fullName": "Moise TEKO", "sector": "Construction/Travaux publics/Immobilier", "photo": "photos/Moise TEKO.jpeg" },
+        { "fullName": "Sébastien BASSONG", "sector": "Sport", "photo": "photos/Sébastien Bassong .jpeg" },
+        { "fullName": "Stephania AHOUDJI", "sector": "Santé/Social", "photo": "photos/Stephania AHOUDJI.jpeg" },
+        { "fullName": "Lewis SOMASSOU", "sector": "Arts du spectable", "photo": "photos/Lewis SOMASSOU.jpeg" },
+        { "fullName": "Elisabeth KOFFI", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Elisabeth KOFFI.jpeg" },
+        { "fullName": "Jean-Yves MEFRE", "sector": "Droit/Economie/Gestion", "photo": "photos/Jean-Yves MEFRE.jpeg" },
+        { "fullName": "Marie-Emmanuel BRUNO", "sector": "Santé/Social", "photo": "photos/Marie-Emmanuel BRUNO.jpeg" },
+        { "fullName": "Seynan ALOKPO", "sector": "Droit/Economie/Gestion", "photo": "photos/Seynan ALOKPO.jpeg" },
+        { "fullName": "Donan TEKO", "sector": "Droit/Economie/Gestion", "photo": "photos/Donan TEKO.jpeg" },
+        { "fullName": "Divine KASI", "sector": "Santé/Social", "photo": "photos/Divine KASI.jpeg" },
+        { "fullName": "Carol OUATTARA", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Carol OUATTARA.jpeg" },
+        { "fullName": "Aurélien BASSONG NGUENA", "sector": "Services / Gestion", "photo": "photos/Aurélien BASSONG NGUENA.jpeg" },
+        { "fullName": "Laura MATABISHI-BIBI", "sector": "Santé/Social", "photo": "photos/Laura MATABISHI-BIBI.jpeg" },
+        { "fullName": "Karine BLI", "sector": "Services / Gestion", "photo": "photos/Karine BLI.jpeg" },
+        { "fullName": "Rebecca BIALY", "sector": "Services / Gestion", "photo": "photos/Rebecca BIALY.jpeg" },
+        { "fullName": "Hortense ANGOSTON-DOZA", "sector": "Services / Gestion", "photo": "photos/Hortense ANGOSTON-DOZA.jpeg" },
+        { "fullName": "Jules MEFRE", "sector": "Construction/Travaux publics/Immobilier", "photo": "photos/Jules MEFRE.jpeg" },
+        { "fullName": "Anne-Marie BIALY", "sector": "Actuaire", "photo": "photos/Anne-Marie BIALY.jpeg" },
+        { "fullName": "Prince Israel KOYA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Prince Israël KOYA.jpeg" },
+        { "fullName": "Dominique DEPRI", "sector": "Santé/Social", "photo": "photos/Dominique DEPRI.jpeg" },
+        { "fullName": "Roméo GBONGBON", "sector": "Informatique/Télécoms", "photo": "photos/Roméo GBONGBON.jpeg" },
+        { "fullName": "Marie LARCHER", "sector": "Autres", "photo": "photos/Marie LARCHER.jpeg" },
+        { "fullName": "Victoire BLÉ", "sector": "BTP / Construction / Transport", "photo": "photos/Victoire BLÉ.jpeg" },
+        { "fullName": "Manuela Charlene MANANGA", "sector": "Services / Gestion", "photo": "photos/Manuela Charlene MANANGA.jpeg" },
+        { "fullName": "Merveille Hankpe", "sector": "Santé/Social", "photo": "photos/Merveille HANKPÉ.jpeg" },
+        { "fullName": "Samson KADJA", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samson KADJA.jpeg" },
+        { "fullName": "Samuel ANATOLE", "sector": "Droit/Economie/Gestion", "photo": "photos/Samuel ANATOLE.jpeg" },
+        { "fullName": "Alexandra Cinthia BALINGUIN", "sector": "Services / Gestion", "photo": "photos/Alexandra Cinthia BALINGUIN.jpeg" },
+        { "fullName": "Michel Joncart", "sector": "Santé/Social", "photo": "photos/Michel Joncart.jpeg" },
+        { "fullName": "Yvan NZALENGI", "sector": "Autres", "photo": "photos/Yvan NZALENGI.jpeg" },
+        { "fullName": "Emmanuel LAGO", "sector": "Autres", "photo": "photos/Emmanuel LAGO.jpeg" },
+        { "fullName": "Eric MATABISHI-BIBI", "sector": "Autres", "photo": "photos/Eric MATABISHI-BIBI.jpeg" },
+        { "fullName": "Nadiah ADEBOH", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Nadiah ADEBOH.jpeg" },
+        { "fullName": "Rebecca NYEMB", "sector": "Santé/Social", "photo": "photos/Rebecca NYEMB.jpeg" },
+        { "fullName": "Antoine Desiré NYEMB", "sector": "Autres", "photo": "photos/Antoine Desiré NYEMB.jpeg" },
+        { "fullName": "Patrick MANZUMBU", "sector": "Autres", "photo": "photos/Patrick MANZUMBU.jpeg" },
+        { "fullName": "Sylvia KADJA", "sector": "Autres", "photo": "photos/Sylvia KADJA.jpeg" },
+        { "fullName": "Elia MEFRE", "sector": "Autres", "photo": "photos/Elia MEFRE.jpeg" },
+        { "fullName": "Pelagie GAE", "sector": "Autres", "photo": "photos/Pelagie GAE.jpeg" },
+        { "fullName": "Samuel KASI", "sector": "Autres", "photo": "photos/Samuel KASI.jpeg" },
+        { "fullName": "Nathalie AKELE", "sector": "Autres", "photo": "photos/Nathalie AKELE.jpeg" },
+        { "fullName": "Angela SILVA FERNANDES", "sector": "Autres", "photo": "photos/Angela SILVA FERNANDES.jpeg" },
+        { "fullName": "Ruth ASSOGBA", "sector": "Autres", "photo": "photos/Ruth ASSOGBA.jpeg" },
+        { "fullName": "Sarah BIALY", "sector": "Sport", "photo": "photos/Sarah BIALY.jpeg" },
+        { "fullName": "Wilfried GBONGBON", "sector": "BTP / Construction / Transport", "photo": "photos/Wilfried GBONGBON.jpeg" },
+        { "fullName": "Carole GUEI", "sector": "Autres", "photo": "photos/CAROLE GUEI.jpeg" },
+        { "fullName": "Albertine GBEGNONVI", "sector": "Santé/Social", "photo": "photos/Albertine GBEGNONVI.jpeg" },
+        { "fullName": "Didier DOLOIR", "sector": "Autres", "photo": "photos/Didier DOLOIR.jpeg" },
+        { "fullName": "Calixte OGAN", "sector": "Autres", "photo": "photos/Calixte OGAN.jpeg" },
+        { "fullName": "Julie ETOUNDI", "sector": "Santé/Social", "photo": "photos/Julie ETOUNDI.jpeg" },
+        { "fullName": "Mélissa AGOSSOU", "sector": "Santé/Social", "photo": "photos/Mélissa AGOSSOU.jpeg" },
+        { "fullName": "Atha KABIA", "sector": "Autres", "photo": "photos/Atha KABIA.jpeg" },
+        { "fullName": "Bartel MBOUMBA", "sector": "Informatique/Télécoms", "photo": "photos/Bartel MBOUMBA.jpeg" },
+        { "fullName": "Abiola PADONOU", "sector": "Arts du spectable", "photo": "photos/Abiola PADONOU.jpeg" },
+        { "fullName": "Thérèse ADJOVI", "sector": "Autres", "photo": "photos/Thérèse ADJOVI.jpeg" },
+      ];
+
+    // ===== Utilitaires =====
+    function escapeHTML(s=''){
+      return s.replace(/[&<>"']/g,m=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+    }
+    function personIconSVG(alt=''){
+      return `
+      <div class="d-flex align-items-center justify-content-center bg-light rounded avatar interv-photo" title="${escapeHTML(alt)}">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path fill="#9ca3af" d="M12 12a5 5 0 1 0-5-5 5 5 0 0 0 5 5Z"/>
+          <path fill="#9ca3af" d="M3 21a9 9 0 0 1 18 0Z"/>
+        </svg>
+      </div>`;
+    }
+
+    // ===== Rendu =====
+    const gridI   = document.getElementById('intervenantsGrid');
+    const filterI = document.getElementById('intervenantsFilter');
+
+    function cardHTML(p){
+      const alt = escapeHTML(p.fullName || '');
+      const sector = escapeHTML(p.sector || '');
+      // si pas de chemin photo, on met directement l'icône
+      const imgHTML = p.photo
+        ? `<img class="avatar interv-photo mb-2" data-photo="1" src="${p.photo}" alt="${alt}" loading="lazy" />`
+        : personIconSVG(p.fullName);
+
+      return `
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card interv h-100 p-2">
+            ${imgHTML}
+            <div class="px-1 pb-2">
+              <strong>${alt}</strong><br>
+              <small class="text-muted">${sector}</small>
+            </div>
+          </div>
+        </div>`;
+    }
+
+    function attachFallbackIcons(scope=document){
+      // remplace toute image cassée par l’icône personne
+      scope.querySelectorAll('#intervenantsGrid img[data-photo]').forEach(img=>{
+        img.addEventListener('error', ()=>{
+          const alt = img.getAttribute('alt') || 'Intervenant';
+          img.outerHTML = personIconSVG(alt);
+        }, { once:true });
+      });
+    }
+
+    function renderIntervenants(sector=''){
+      const list = sector ? INTERVENANTS.filter(x => (x.sector||'').trim() === sector.trim()) : INTERVENANTS;
+      gridI.innerHTML = list.map(cardHTML).join('');
+      attachFallbackIcons(gridI);
+    }
+
+    function initIntervenants(){
+      // Remplir le select (trié, unique)
+      const sectors = [...new Set(INTERVENANTS.map(x => (x.sector||'').trim()).filter(Boolean))].sort();
+      sectors.forEach(s=>{
+        const opt = document.createElement('option');
+        opt.value = s; opt.textContent = s;
+        filterI.appendChild(opt);
+      });
+      filterI.addEventListener('change', e => renderIntervenants(e.target.value));
+      renderIntervenants();
+    }
+
+    document.addEventListener('DOMContentLoaded', initIntervenants);
+  </script>
+
 
   <script>
     /* ===== Données STANDS (extraites du tableau fourni) ===== */
@@ -1221,7 +1359,6 @@
     });
   </script>
 
-
   <script>
     // Active le ScrollSpy avec un offset = hauteur de la navbar
     (function () {
@@ -1237,6 +1374,7 @@
       window.addEventListener('resize', () => spy.refresh());
     })();
   </script>
+
   <script>
     // Navbar sticky uniquement après le hero
     (function () {
