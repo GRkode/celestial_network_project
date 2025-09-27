@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salon Business – Celestial Network</title>
+  <meta name="description" content="Salon Business – Exposition, transmission et inspiration. Antony – 4 octobre, 13h." />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Harmonise Bootstrap avec notre charte */
+    .navbar .nav-link{color:var(--ink)}
+    .navbar .nav-link:hover{color:var(--brand)}
+    .navbar .btn{border:0}
+
+    :root{ --brand:#d32f2f; --brand-600:#b71c1c; --ink:#1f2937; --muted:#6b7280; --surface:#ffffff; --surface-alt:#fafafa; }
+    html,body{font-family:'Roboto',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    /* Header / Nav */
+    header.hero{padding:4rem 0 2rem;background:linear-gradient(180deg,#fff,#fff)}
+    header.hero h1{font-size:clamp(1.8rem,2.5vw + 1rem,3rem);color:var(--brand);margin-bottom:.5rem}
+    header.hero .subtitle{color:var(--ink);font-weight:500}
+    nav{position:sticky;top:0;background:#fff;z-index:10;border-bottom:1px solid #eee}
+    nav ul{list-style:none;margin:0;padding:.5rem 0;display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+    nav a{text-decoration:none;color:var(--ink)}
+    nav a:hover{color:var(--brand)}
+    nav a[role="button"].contrast{background:var(--brand);border-color:var(--brand);color:#fff}
+    nav a[role="button"].contrast:hover{filter:brightness(.95)}
+
+    /* Links */
+    a{color:var(--brand)}
+    a:visited{color:var(--brand)}
+
+    /* Utilities */
+    .chip{display:inline-flex;align-items:center;gap:.5rem;border:1px solid #e5e7eb;border-radius:999px;padding:.25rem .75rem;font-size:.9rem}
+    .badge{background:var(--brand);color:#fff;padding:.2rem .5rem;border-radius:6px;font-weight:600}
+    .grid{display:grid;gap:1rem}
+    .grid.exhibitors{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{border:1px solid #e5e7eb;border-radius:14px;padding:1rem;background:#fff}
+    .muted{color:var(--muted)}
+    .section{padding:2.5rem 0}
+    .section.alt{background:var(--surface-alt)}
+    .section-title h2, h2{color:var(--brand)}
+
+    /* Programme */
+    .program-item{border-left:3px solid var(--brand);padding-left:.75rem;margin:0 0 1rem 0}
+    .program-time{font-weight:700}
+    .kicker{letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--muted)}
+
+    /* Quick actions bar */
+    .quick-actions{position:sticky;top:3.2rem;background:#fff;border-bottom:1px solid #eee;z-index:9}
+    .qa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
+    .qa-item{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:.9rem;border:1px solid #eee;border-radius:12px;text-align:center;background:#fff;text-decoration:none;color:var(--ink)}
+    .qa-item:visited{color:var(--ink)}
+    .qa-item:hover{border-color:var(--brand)}
+    .qa-item svg{width:26px;height:26px;margin-bottom:.25rem;fill:var(--brand)}
+    .qa-item span{font-weight:600}
+
+    
+    footer{background:#111;color:#fff;padding:2rem 0;margin-top:3rem}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top" style="top:0; z-index: 1020;">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 50" height="32">
+          <!-- Icône cercle stylisé -->
+          <circle cx="25" cy="25" r="20" fill="var(--brand)" />
+          <text x="25" y="30" text-anchor="middle" font-family="Roboto, sans-serif"
+                font-size="18" font-weight="700" fill="#fff">CN</text>
+          
+          <!-- Texte à droite -->
+          <text x="50" y="35" font-family="Roboto, sans-serif"
+                font-size="20" font-weight="700" fill="var(--brand)">
+            Celestial Network
+          </text>
+        </svg>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#contact">Info & contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programme">Programme</a></li>
+          <li class="nav-item"><a class="nav-link" href="#participants">Participants</a></li>
+          <li class="nav-item"><a class="btn btn-sm" style="background:var(--brand); color:#fff" href="#inscription">S’inscrire</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+   <header class="hero text-white" style="background:url('hero-area.jpg') center/cover no-repeat;">
+    <div class="container">
+      <h1>Salon Business 2025</h1>
+      <p>Élévation professionnelle de la communauté céleste.<br>Samedi 4 octobre – 13h<br>5 avenue Léon Harmel, 92160 Antony</p>
+      <a href="#inscription" class="btn btn-lg mt-3">Je m’inscris</a>
+    </div>
+  </header>
+
+  <!-- Info -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Info & contact</h2>
+      <p>Celestial Network rassemble des professionnels engagés pour l’élévation de la communauté céleste. Nous créons des passerelles entre générations, métiers et vocations pour favoriser l’inspiration, le partage et les opportunités concrètes.</p>
+      <p><strong>Adresse :</strong> 5 avenue Léon Harmel, 92160 Antony — <a href="https://www.google.com/maps?q=5+avenue+L%C3%A9on+Harmel,+92160+Antony" target="_blank">Voir sur Google Maps</a></p>
+      <p><strong>Contact :</strong> <a href="mailto:contact@celestial-network.fr">contact@celestial-network.fr</a> · <a href="https://wa.me/33600000000" target="_blank">WhatsApp</a></p>
+    </div>
+  </section>
+
+  <!-- Programme -->
+  <section id="programme" class="section alt">
+    <div class="container">
+      <h2 class="text-center mb-2">Programme</h2>
+      <p class="text-center text-muted mb-4">Découvrez le déroulé de la journée. Les horaires sont susceptibles d'évoluer.</p>
+
+      <!-- Onglets jours -->
+      <ul class="nav nav-fill nav-pills schedule-tabs mb-4" id="programTabs" role="tablist">
+        <!-- Rendu dynamique via JS -->
+      </ul>
+
+      <!-- Contenus par jour -->
+      <div class="tab-content" id="programTabContent">
+        <!-- Rendu dynamique via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Participants -->
+  <section id="participants" class="section">
+    <div class="container">
+      <h2>Participants</h2>
+      <div class="mb-3">
+        <label for="sectorFilter" class="form-label">Filtrer par secteur :</label>
+        <select id="sectorFilter" class="form-select w-auto d-inline-block">
+          <option value="">Tous</option>
+        </select>
+      </div>
+      <div class="row" id="participantsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Inscription -->
+  <section id="inscription" class="section alt">
+    <div class="container">
+      <h2>S’inscrire</h2>
+      <p>Remplissez le formulaire pour confirmer votre présence. Gratuit et ouvert à tous.</p>
+      <iframe src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true" width="100%" height="720" frameborder="0">Chargement…</iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <small>© <span id="year"></span> Celestial Network — Salon Business</small>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Données Programme (peut gérer 1..N jours) =====
+    const PROGRAM_DAYS = [
+      { label: 'Jour - 01', id: 'day1', items: [
+        { time: '13:00 - 13:30', title: 'Ouverture des portes', desc: 'Accueil & café' },
+        { time: '13:30 - 15:00', title: 'Forum des métiers', desc: 'Découverte des parcours et stands métiers.' },
+        { time: '15:00 - 16:00', title: 'Table ronde #1', desc: 'Emploi & foi : trouver sa voie, oser se lancer.' },
+        { time: '16:00 - 17:00', title: 'Expositions inspirantes', desc: 'Projets, produits et initiatives.' },
+        { time: '17:00 - 18:00', title: 'Networking guidé', desc: 'Rencontres thématiques par centre d’intérêt.' }
+      ]}
+      // Vous pouvez ajouter d'autres jours si besoin, ex. { label: 'Jour - 02', id:'day2', items:[ ... ]}
+    ];
+
+    const PARTICIPANTS = [
+      { firstName:"Sarah", lastName:"Adeyemi", job:"Développeuse web", sector:"Informatique"},
+      { firstName:"David", lastName:"Kossi", job:"Chargé de com’", sector:"Communication"},
+      { firstName:"Miriam", lastName:"Bello", job:"Infirmière", sector:"Santé"}
+    ];
+
+    // ===== Rendu Programme façon "tabs + accordéons" =====
+    const tabsEl = document.getElementById('programTabs');
+    const tabContentEl = document.getElementById('programTabContent');
+
+    function renderProgramTabs(){
+      tabsEl.innerHTML = PROGRAM_DAYS.map((d,idx)=>`
+        <li class="nav-item" role="presentation">
+        </li>`).join('');
+    }
+
+    function renderProgramPanels(){
+      tabContentEl.innerHTML = PROGRAM_DAYS.map((d,idx)=>{
+        const accId = `${d.id}-acc`;
+        const items = d.items.map((it,i)=>{
+          const collapseId = `${accId}-item${i}`;
+          const headingId = `${accId}-heading${i}`;
+          return `
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="${headingId}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#${collapseId}" aria-expanded="false" aria-controls="${collapseId}">
+                <span class="me-2 text-uppercase">${it.time}</span> ${it.title}
+              </button>
+            </h2>
+            <div id="${collapseId}" class="accordion-collapse collapse" aria-labelledby="${headingId}" data-bs-parent="#${accId}">
+              <div class="accordion-body">${it.desc||''}</div>
+            </div>
+          </div>`;
+        }).join('');
+        return `
+        <div class="tab-pane fade ${idx===0?'show active':''}" id="${d.id}" role="tabpanel" aria-labelledby="${d.id}-tab" tabindex="0">
+          <div class="accordion schedule-accordion" id="${accId}">
+            ${items}
+          </div>
+        </div>`;
+      }).join('');
+    }
+
+    // ===== Participants (inchangé) =====
+    const participantsGrid=document.getElementById('participantsGrid');
+    const sectorFilter=document.getElementById('sectorFilter');
+
+    function renderParticipants(sector=''){
+      const list= sector? PARTICIPANTS.filter(x=>x.sector===sector):PARTICIPANTS;
+      participantsGrid.innerHTML=list.map(x=>`
+        <div class='col-md-4 mb-3'>
+          <div class='card h-100'>
+            <strong>${x.firstName} ${x.lastName}</strong>
+            <p class='mb-1'>${x.job}</p>
+            <small class='text-muted'>${x.sector}</small>
+          </div>
+        </div>`).join('');
+    }
+    function renderSectors(){
+      const sectors=[...new Set(PARTICIPANTS.map(x=>x.sector))];
+      sectors.forEach(s=>{const opt=document.createElement('option');opt.value=s;opt.textContent=s;sectorFilter.appendChild(opt)});
+    }
+
+    // ===== Init =====
+    renderProgramTabs();
+    renderProgramPanels();
+
+    renderSectors();
+    renderParticipants();
+
+    sectorFilter?.addEventListener('change',e=>renderParticipants(e.target.value));
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
