@@ -676,30 +676,6 @@
     </div>
   </header>
 
-  <!-- Countdown collé au bas du hero -->
-  <div class="countdown-wrap position-relative" style="margin-top:-3rem; z-index:10;">
-    <div class="container">
-      <div class="row countdown rounded-3 overflow-hidden">
-        <div class="col-3 cell">
-          <div class="value" id="dd">00</div>
-          <div class="label">Jours</div>
-        </div>
-        <div class="col-3 cell">
-          <div class="value" id="hh">00</div>
-          <div class="label">Heures</div>
-        </div>
-        <div class="col-3 cell">
-          <div class="value" id="mm">00</div>
-          <div class="label">Minutes</div>
-        </div>
-        <div class="col-3 cell">
-          <div class="value" id="ss">00</div>
-          <div class="label">Secondes</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- Info -->
   <section id="contact" class="section first about-section">
     <div class="container">
@@ -944,37 +920,14 @@
     renderProgramPanels();
 
     renderSectors();
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // ===== Countdown jusqu'à l'évènement =====
-    const target = new Date('2025-10-04T13:00:00');
-    const dd = document.getElementById('dd');
-    const hh = document.getElementById('hh');
-    const mm = document.getElementById('mm');
-    const ss = document.getElementById('ss');
-    function tick() {
-      const now = new Date();
-      let diff = Math.max(0, target - now);
-      const d = Math.floor(diff / (1000 * 60 * 60 * 24)); diff -= d * 24 * 60 * 60 * 1000;
-      const h = Math.floor(diff / (1000 * 60 * 60)); diff -= h * 60 * 60 * 1000;
-      const m = Math.floor(diff / (1000 * 60)); diff -= m * 60 * 1000;
-      const s = Math.floor(diff / 1000);
-      dd.textContent = String(d).padStart(2, '0');
-      hh.textContent = String(h).padStart(2, '0');
-      mm.textContent = String(m).padStart(2, '0');
-      ss.textContent = String(s).padStart(2, '0');
-    }
-    tick();
-    setInterval(tick, 1000);
   </script>
 
   <script>
     /* ===== Intervenants issus de "Liste Intervenants 3ème édition.xlsx" ===== */
     const INTERVENANTS = [
-        { "fullName": "Sourou AGOSSOU", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Sourou AGOSSOU.png" },
+        { "fullName": "Sourou AGOSSOU", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Sourou Agossou.JPG" },
         { "fullName": "Samuelle SINHOUNTO", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samuelle SINHOUNTO.jpeg" },
-        { "fullName": "Norris HANKPE", "sector": "BTP, Industries, Energie", "photo": "photos/Norris HANKPE.jpeg" },
+        { "fullName": "Norris HANKPE", "sector": "BTP, Industries, Energie", "photo": "photos/Norris Hankpe.JPG" },
         { "fullName": "Happy ZOUNVEHA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Happy ZOUNVEHA.jpeg" },
         { "fullName": "Élie SINHOUNTO", "sector": "Banque/Assurances", "photo": "photos/Elie SINHOUNTO.jpeg" },
         { "fullName": "Gabriel ADETONAH", "sector": "Informatique/Télécoms", "photo": "photos/Gabriel ADETONAH.jpeg" },
@@ -1016,7 +969,7 @@
         { "fullName": "Antoine Desiré NYEMB", "sector": "Autres", "photo": "photos/Antoine Desiré NYEMB.jpeg" },
         { "fullName": "Patrick MANZUMBU", "sector": "Autres", "photo": "photos/Patrick MANZUMBU.jpeg" },
         { "fullName": "Sylvia KADJA", "sector": "Autres", "photo": "photos/Sylvia KADJA.jpeg" },
-        { "fullName": "Elia MEFRE", "sector": "Autres", "photo": "photos/Elia MEFRE.jpeg" },
+        { "fullName": "Elia MEFRE", "sector": "Autres", "photo": "photos/Elia Mefre.JPG" },
         { "fullName": "Pelagie GAE", "sector": "Autres", "photo": "photos/Pelagie GAE.jpeg" },
         { "fullName": "Samuel KASI", "sector": "Autres", "photo": "photos/Samuel KASI.jpeg" },
         { "fullName": "Nathalie AKELE", "sector": "Autres", "photo": "photos/Nathalie AKELE.jpeg" },
@@ -1026,7 +979,7 @@
         { "fullName": "Wilfried GBONGBON", "sector": "BTP / Construction / Transport", "photo": "photos/Wilfried GBONGBON.jpeg" },
         { "fullName": "Carole GUEI", "sector": "Autres", "photo": "photos/CAROLE GUEI.jpeg" },
         { "fullName": "Albertine GBEGNONVI", "sector": "Santé/Social", "photo": "photos/Albertine GBEGNONVI.jpeg" },
-        { "fullName": "Didier DOLOIR", "sector": "Autres", "photo": "photos/Didier DOLOIR.jpeg" },
+        { "fullName": "Didier DOLOIR", "sector": "Autres", "photo": "photos/Didier Doloir.jpg" },
         { "fullName": "Calixte OGAN", "sector": "Autres", "photo": "photos/Calixte OGAN.jpeg" },
         { "fullName": "Julie ETOUNDI", "sector": "Santé/Social", "photo": "photos/Julie ETOUNDI.jpeg" },
         { "fullName": "Mélissa AGOSSOU", "sector": "Santé/Social", "photo": "photos/Mélissa AGOSSOU.jpeg" },
