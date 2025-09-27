@@ -923,71 +923,71 @@
   </script>
 
   <script>
-    /* ===== Intervenants issus de "Liste Intervenants 3ème édition.xlsx" ===== */
-    const INTERVENANTS = [
-        { "fullName": "Sourou AGOSSOU", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Sourou Agossou.JPG" },
-        { "fullName": "Samuelle SINHOUNTO", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samuelle SINHOUNTO.jpeg" },
-        { "fullName": "Norris HANKPE", "sector": "BTP, Industries, Energie", "photo": "photos/Norris Hankpe.JPG" },
-        { "fullName": "Happy ZOUNVEHA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Happy ZOUNVEHA.jpeg" },
-        { "fullName": "Élie SINHOUNTO", "sector": "Banque/Assurances", "photo": "photos/Elie SINHOUNTO.jpeg" },
-        { "fullName": "Gabriel ADETONAH", "sector": "Informatique/Télécoms", "photo": "photos/Gabriel ADETONAH.jpeg" },
-        { "fullName": "Regis MERCIER", "sector": "Informatique/Télécoms", "photo": "photos/Regis MERCIER.jpeg" },
-        { "fullName": "Moise TEKO", "sector": "Construction/Travaux publics/Immobilier", "photo": "photos/Moise TEKO.jpeg" },
-        { "fullName": "Sébastien BASSONG", "sector": "Sport", "photo": "photos/Sébastien Bassong .jpeg" },
-        { "fullName": "Stephania AHOUDJI", "sector": "Santé/Social", "photo": "photos/Stephania AHOUDJI.jpeg" },
-        { "fullName": "Lewis SOMASSOU", "sector": "Arts du spectable", "photo": "photos/Lewis SOMASSOU.jpeg" },
-        { "fullName": "Elisabeth KOFFI", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Elisabeth KOFFI.jpeg" },
-        { "fullName": "Jean-Yves MEFRE", "sector": "Droit/Economie/Gestion", "photo": "photos/Jean-Yves MEFRE.jpeg" },
-        { "fullName": "Marie-Emmanuel BRUNO", "sector": "Santé/Social", "photo": "photos/Marie-Emmanuel BRUNO.jpeg" },
-        { "fullName": "Seynan ALOKPO", "sector": "Droit/Economie/Gestion", "photo": "photos/Seynan ALOKPO.jpeg" },
-        { "fullName": "Donan TEKO", "sector": "Droit/Economie/Gestion", "photo": "photos/Donan TEKO.jpeg" },
-        { "fullName": "Divine KASI", "sector": "Santé/Social", "photo": "photos/Divine KASI.jpeg" },
-        { "fullName": "Carol OUATTARA", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Carol OUATTARA.jpeg" },
-        { "fullName": "Aurélien BASSONG NGUENA", "sector": "Services / Gestion", "photo": "photos/Aurélien BASSONG NGUENA.jpeg" },
-        { "fullName": "Laura MATABISHI-BIBI", "sector": "Santé/Social", "photo": "photos/Laura MATABISHI-BIBI.jpeg" },
-        { "fullName": "Karine BLI", "sector": "Services / Gestion", "photo": "photos/Karine BLI.jpeg" },
-        { "fullName": "Rebecca BIALY", "sector": "Services / Gestion", "photo": "photos/Rebecca BIALY.jpeg" },
-        { "fullName": "Hortense ANGOSTON-DOZA", "sector": "Services / Gestion", "photo": "photos/Hortense ANGOSTON-DOZA.jpeg" },
-        { "fullName": "Jules MEFRE", "sector": "Construction/Travaux publics/Immobilier", "photo": "photos/Jules MEFRE.jpeg" },
-        { "fullName": "Anne-Marie BIALY", "sector": "Actuaire", "photo": "photos/Anne-Marie BIALY.jpeg" },
-        { "fullName": "Prince Israel KOYA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Prince Israël KOYA.jpeg" },
-        { "fullName": "Dominique DEPRI", "sector": "Santé/Social", "photo": "photos/Dominique DEPRI.jpeg" },
-        { "fullName": "Roméo GBONGBON", "sector": "Informatique/Télécoms", "photo": "photos/Roméo GBONGBON.jpeg" },
-        { "fullName": "Marie LARCHER", "sector": "Autres", "photo": "photos/Marie LARCHER.jpeg" },
-        { "fullName": "Victoire BLÉ", "sector": "BTP / Construction / Transport", "photo": "photos/Victoire BLÉ.jpeg" },
-        { "fullName": "Manuela Charlene MANANGA", "sector": "Services / Gestion", "photo": "photos/Manuela Charlene MANANGA.jpeg" },
-        { "fullName": "Merveille Hankpe", "sector": "Santé/Social", "photo": "photos/Merveille HANKPÉ.jpeg" },
-        { "fullName": "Samson KADJA", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samson KADJA.jpeg" },
-        { "fullName": "Samuel ANATOLE", "sector": "Droit/Economie/Gestion", "photo": "photos/Samuel ANATOLE.jpeg" },
-        { "fullName": "Alexandra Cinthia BALINGUIN", "sector": "Services / Gestion", "photo": "photos/Alexandra Cinthia BALINGUIN.jpeg" },
-        { "fullName": "Michel Joncart", "sector": "Santé/Social", "photo": "photos/Michel Joncart.jpeg" },
-        { "fullName": "Yvan NZALENGI", "sector": "Autres", "photo": "photos/Yvan NZALENGI.jpeg" },
-        { "fullName": "Emmanuel LAGO", "sector": "Autres", "photo": "photos/Emmanuel LAGO.jpeg" },
-        { "fullName": "Eric MATABISHI-BIBI", "sector": "Autres", "photo": "photos/Eric MATABISHI-BIBI.jpeg" },
-        { "fullName": "Nadiah ADEBOH", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Nadiah ADEBOH.jpeg" },
-        { "fullName": "Rebecca NYEMB", "sector": "Santé/Social", "photo": "photos/Rebecca NYEMB.jpeg" },
-        { "fullName": "Antoine Desiré NYEMB", "sector": "Autres", "photo": "photos/Antoine Desiré NYEMB.jpeg" },
-        { "fullName": "Patrick MANZUMBU", "sector": "Autres", "photo": "photos/Patrick MANZUMBU.jpeg" },
-        { "fullName": "Sylvia KADJA", "sector": "Autres", "photo": "photos/Sylvia KADJA.jpeg" },
-        { "fullName": "Elia MEFRE", "sector": "Autres", "photo": "photos/Elia Mefre.JPG" },
-        { "fullName": "Pelagie GAE", "sector": "Autres", "photo": "photos/Pelagie GAE.jpeg" },
-        { "fullName": "Samuel KASI", "sector": "Autres", "photo": "photos/Samuel KASI.jpeg" },
-        { "fullName": "Nathalie AKELE", "sector": "Autres", "photo": "photos/Nathalie AKELE.jpeg" },
-        { "fullName": "Angela SILVA FERNANDES", "sector": "Autres", "photo": "photos/Angela SILVA FERNANDES.jpeg" },
-        { "fullName": "Ruth ASSOGBA", "sector": "Autres", "photo": "photos/Ruth ASSOGBA.jpeg" },
-        { "fullName": "Sarah BIALY", "sector": "Sport", "photo": "photos/Sarah BIALY.jpeg" },
-        { "fullName": "Wilfried GBONGBON", "sector": "BTP / Construction / Transport", "photo": "photos/Wilfried GBONGBON.jpeg" },
-        { "fullName": "Carole GUEI", "sector": "Autres", "photo": "photos/CAROLE GUEI.jpeg" },
-        { "fullName": "Albertine GBEGNONVI", "sector": "Santé/Social", "photo": "photos/Albertine GBEGNONVI.jpeg" },
-        { "fullName": "Didier DOLOIR", "sector": "Autres", "photo": "photos/Didier Doloir.jpg" },
-        { "fullName": "Calixte OGAN", "sector": "Autres", "photo": "photos/Calixte OGAN.jpeg" },
-        { "fullName": "Julie ETOUNDI", "sector": "Santé/Social", "photo": "photos/Julie ETOUNDI.jpeg" },
-        { "fullName": "Mélissa AGOSSOU", "sector": "Santé/Social", "photo": "photos/Mélissa AGOSSOU.jpeg" },
-        { "fullName": "Atha KABIA", "sector": "Autres", "photo": "photos/Atha KABIA.jpeg" },
-        { "fullName": "Bartel MBOUMBA", "sector": "Informatique/Télécoms", "photo": "photos/Bartel MBOUMBA.jpeg" },
-        { "fullName": "Abiola PADONOU", "sector": "Arts du spectable", "photo": "photos/Abiola PADONOU.jpeg" },
-        { "fullName": "Thérèse ADJOVI", "sector": "Autres", "photo": "photos/Thérèse ADJOVI.jpeg" },
-      ];
+   const INTERVENANTS = [
+      { "fullName": "Sourou AGOSSOU", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Sourou Agossou.JPG", "role": "Directeur Administratif et Financier - Responsable Performance ERP Groupe" },
+      { "fullName": "Samuelle SINHOUNTO", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samuelle SINHOUNTO.jpeg", "role": "Auditeur interne / externe\nContrôleur de gestion / Contrôleur financier\nAnalyste financier" },
+      { "fullName": "Norris HANKPE", "sector": "BTP, Industries, Energie", "photo": "photos/Norris Hankpe.JPG", "role": "Technicien climatisation" },
+      { "fullName": "Happy ZOUNVEHA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Happy ZOUNVEHA.jpeg", "role": "Chargée de programmes" },
+      { "fullName": "Élie SINHOUNTO", "sector": "Banque/Assurances", "photo": "photos/Elie SINHOUNTO.jpeg", "role": "Consultant IT -  AMOA/ Gestion de projet" },
+      { "fullName": "Gabriel ADETONAH", "sector": "Informatique/Télécoms", "photo": "photos/Gabriel ADETONAH.jpeg", "role": "Chef de projet informatique" },
+      { "fullName": "Regis MERCIER", "sector": "Informatique/Télécoms", "photo": "photos/Regis MERCIER.jpeg", "role": "Chef de projet sur des outils digitaux" },
+      { "fullName": "Moise TEKO", "sector": "Construction/Travaux publics/Immobilier", "photo": "photos/Moise TEKO.jpeg", "role": "Chef de projet" },
+      { "fullName": "Sébastien BASSONG", "sector": "Sport", "photo": "photos/Sébastien Bassong .jpeg", "role": "Ex footballer professionnel - Coach" },
+      { "fullName": "Stephania AHOUDJI", "sector": "Santé/Social", "photo": "photos/Stephania AHOUDJI.jpeg", "role": "Travailleur sociale" },
+      { "fullName": "Lewis SOMASSOU", "sector": "Arts du spectable", "photo": "photos/Lewis SOMASSOU.jpeg", "role": "Artiste, compositeur, Interprète" },
+      { "fullName": "Elisabeth KOFFI", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Elisabeth KOFFI.jpeg", "role": "Chargée accompagnement  jeunes - FRANCE TRAVAIL " },
+      { "fullName": "Jean-Yves MEFRE", "sector": "Droit/Economie/Gestion", "photo": "photos/Jean-Yves MEFRE.jpeg", "role": "Contrôleur de gestion" },
+      { "fullName": "Marie-Emmanuel BRUNO", "sector": "Santé/Social", "photo": "photos/Marie-Emmanuel BRUNO.jpeg", "role": "Infirmière" },
+      { "fullName": "Seynan ALOKPO", "sector": "Droit/Economie/Gestion", "photo": "photos/Seynan ALOKPO.jpeg", "role": "Expert-comptable" },
+      { "fullName": "Donan TEKO", "sector": "Droit/Economie/Gestion", "photo": "photos/Donan TEKO.jpeg", "role": "Responsable comptable/ Expertise comptable " },
+      { "fullName": "Divine KASI", "sector": "Santé/Social", "photo": "photos/Divine KASI.jpeg", "role": "Fondatrice de DSANI Event / Infirmière " },
+      { "fullName": "Carol OUATTARA", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Carol OUATTARA.jpeg", "role": "Actuaire" },
+      { "fullName": "Aurélien BASSONG NGUENA", "sector": "Services / Gestion", "photo": "photos/Aurélien BASSONG NGUENA.jpeg", "role": "Manager/Photographe" },
+      { "fullName": "Laura MATABISHI-BIBI", "sector": "Santé/Social", "photo": "photos/Laura MATABISHI-BIBI.jpeg", "role": "Docteur en biologie / Chef de projet R&D" },
+      { "fullName": "Karine BLI", "sector": "Services / Gestion", "photo": "photos/Karine BLI.jpeg", "role": "Traiteur" },
+      { "fullName": "Rebecca BIALY", "sector": "Services / Gestion", "photo": "photos/Rebecca BIALY.jpeg", "role": "Traiteur" },
+      { "fullName": "Hortense ANGOSTON-DOZA", "sector": "Services / Gestion", "photo": "photos/Hortense ANGOSTON-DOZA.jpeg", "role": "Gérante d'une conciergerie " },
+      { "fullName": "Jules MEFRE", "sector": "Construction/Travaux publics/Immobilier", "photo": "photos/Jules MEFRE.jpeg", "role": "Conseiller immobilier" },
+      { "fullName": "Anne-Marie BIALY", "sector": "Actuaire", "photo": "photos/Anne-Marie BIALY.jpeg", "role": "Fondatrice du mouvement 'Vase d'Honneur' et créatrice de contenu" },
+      { "fullName": "Prince Israel KOYA", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Prince Israël KOYA.jpeg", "role": "Enseignant Chercheur / Responsable EMUSA" },
+      { "fullName": "Dominique DEPRI", "sector": "Santé/Social", "photo": "photos/Dominique DEPRI.jpeg", "role": "Travailleur sociale " },
+      { "fullName": "Roméo GBONGBON", "sector": "Informatique/Télécoms", "photo": "photos/Roméo GBONGBON.jpeg", "role": "Développeur informatique" },
+      { "fullName": "Marie LARCHER", "sector": "Autres", "photo": "photos/Marie LARCHER.jpeg", "role": "Actrice" },
+      { "fullName": "Victoire BLÉ", "sector": "BTP / Construction / Transport", "photo": "photos/Victoire BLÉ.jpeg", "role": "Chargé d'urbanisme" },
+      { "fullName": "Manuela Charlene MANANGA", "sector": "Services / Gestion", "photo": "photos/Manuela Charlene MANANGA.jpeg", "role": "Coiffeuse" },
+      { "fullName": "Merveille Hankpe", "sector": "Santé/Social", "photo": "photos/Merveille HANKPÉ.jpeg", "role": "Prothésiste ongulaire " },
+      { "fullName": "Samson KADJA", "sector": "Banque, Finance, Assurance, Comptabilité, Gestion", "photo": "photos/Samson KADJA.jpeg", "role": "Chef d'entreprise, Expert comptable, Auditeur" },
+      { "fullName": "Samuel ANATOLE", "sector": "Droit/Economie/Gestion", "photo": "photos/Samuel ANATOLE.jpeg", "role": "Clerc de notaire" },
+      { "fullName": "Alexandra Cinthia BALINGUIN", "sector": "Services / Gestion", "photo": "photos/Alexandra Cinthia BALINGUIN.jpeg", "role": "Gestionnaire de recouvrement - URSAFF" },
+      { "fullName": "Michel Joncart", "sector": "Santé/Social", "photo": "photos/Michel Joncart.jpeg", "role": "Infirmier à la retraite" },
+      { "fullName": "Yvan NZALENGI", "sector": "Autres", "photo": "photos/Yvan NZALENGI.jpeg", "role": "Agent sportif" },
+      { "fullName": "Emmanuel LAGO", "sector": "Autres", "photo": "photos/Emmanuel LAGO.jpeg", "role": "Créateur de contenu / Responsable recrutement" },
+      { "fullName": "Eric MATABISHI-BIBI", "sector": "Autres", "photo": "photos/Eric MATABISHI-BIBI.jpeg", "role": "Responsable Import" },
+      { "fullName": "Nadiah ADEBOH", "sector": "Enseignement / Recherche/ Formation", "photo": "photos/Nadiah ADEBOH.jpeg", "role": "Enseignante motivatrice et personnalisée" },
+      { "fullName": "Rebecca NYEMB", "sector": "Santé/Social", "photo": "photos/Rebecca NYEMB.jpeg", "role": "Travailleur social" },
+      { "fullName": "Antoine Desiré NYEMB", "sector": "Autres", "photo": "photos/Antoine Desiré NYEMB.jpeg", "role": "Techniciens de maintenance Sécurité incendie et BAES" },
+      { "fullName": "Patrick MANZUMBU", "sector": "Autres", "photo": "photos/Patrick MANZUMBU.jpeg", "role": "Fiscaliste " },
+      { "fullName": "Sylvia KADJA", "sector": "Autres", "photo": "photos/Sylvia KADJA.jpeg", "role": "Educatrice de jeunes enfants et fondatrice de 'Frères d'espoir'" },
+      { "fullName": "Elia MEFRE", "sector": "Autres", "photo": "photos/Elia Mefre.JPG", "role": "Actrice" },
+      { "fullName": "Pelagie GAE", "sector": "Autres", "photo": "photos/Pelagie GAE.jpeg", "role": "Mamie Choco Traiteur / Auxiliaire de puéricuture " },
+      { "fullName": "Samuel KASI", "sector": "Autres", "photo": "photos/Samuel KASI.jpeg", "role": "Graphiste - Fondateur de K6 Touch" },
+      { "fullName": "Nathalie AKELE", "sector": "Autres", "photo": "photos/Nathalie AKELE.jpeg", "role": "Chargé des concours aux Ministère de l'Intérieur" },
+      { "fullName": "Angela SILVA FERNANDES", "sector": "Autres", "photo": "photos/Angela SILVA FERNANDES.jpeg", "role": "Experte Services Publiques (CAF/CNAV/MSA) " },
+      { "fullName": "Ruth ASSOGBA", "sector": "Autres", "photo": "photos/Ruth ASSOGBA.jpeg", "role": "Styliste modéliste" },
+      { "fullName": "Sarah BIALY", "sector": "Sport", "photo": "photos/Sarah BIALY.jpeg", "role": "Artiste Chantre - Coach vocale" },
+      { "fullName": "Wilfried GBONGBON", "sector": "BTP / Construction / Transport", "photo": "photos/Wilfried GBONGBON.jpeg", "role": "Chef de projet Génie Civil et Infrastructure de transport" },
+      { "fullName": "Carole GUEI", "sector": "Autres", "photo": "photos/CAROLE GUEI.jpeg", "role": "Gérante de The Luxury Conciergerie" },
+      { "fullName": "Albertine GBEGNONVI", "sector": "Santé/Social", "photo": "photos/Albertine GBEGNONVI.jpeg", "role": "Infirmière" },
+      { "fullName": "Didier DOLOIR", "sector": "Autres", "photo": "photos/Didier Doloir.jpg", "role": "Assistant d'exploitation - RATP" },
+      { "fullName": "Calixte OGAN", "sector": "Autres", "photo": "photos/Calixte OGAN.jpeg", "role": "Chargé d’Accompagnement : Emploi, Insertion" },
+      { "fullName": "Julie ETOUNDI", "sector": "Santé/Social", "photo": "photos/Julie ETOUNDI.jpeg", "role": "Infirmière" },
+      { "fullName": "Mélissa AGOSSOU", "sector": "Santé/Social", "photo": "photos/Mélissa AGOSSOU.jpeg", "role": "Etudiante en 2nde année de médecine" },
+      { "fullName": "Atha KABIA", "sector": "Autres", "photo": "photos/Atha KABIA.jpeg", "role": "Styliste Modelisme - Maison Kabia" },
+      { "fullName": "Bartel MBOUMBA", "sector": "Informatique/Télécoms", "photo": "photos/Bartel MBOUMBA.jpeg", "role": "Expert digital marketing" },
+      { "fullName": "Abiola PADONOU", "sector": "Arts du spectable", "photo": "photos/Abiola PADONOU.jpeg", "role": "Expert en Art Oratoire" },
+      { "fullName": "Thérèse ADJOVI", "sector": "Autres", "photo": "photos/Thérèse ADJOVI.jpeg", "role": "Ingénieur Génie Civil - Chargée d'études" }
+    ];
+
 
     // ===== Utilitaires =====
     function escapeHTML(s=''){
@@ -1010,6 +1010,7 @@
     function cardHTML(p){
       const alt = escapeHTML(p.fullName || '');
       const sector = escapeHTML(p.sector || '');
+      const role = escapeHTML(p.role || '');
       // si pas de chemin photo, on met directement l'icône
       const imgHTML = p.photo
         ? `<img class="avatar interv-photo mb-2" data-photo="1" src="${p.photo}" alt="${alt}" loading="lazy" />`
@@ -1021,7 +1022,7 @@
             ${imgHTML}
             <div class="px-1 pb-2">
               <strong>${alt}</strong><br>
-              <small class="text-muted">${sector}</small>
+              <small class="text-muted">${role}</small>
             </div>
           </div>
         </div>`;
