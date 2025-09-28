@@ -35,7 +35,7 @@ header.hero{
   scroll-snap-align:start;
 }
 @media (max-width:767.98px){
-  header.hero{background:url('salon_business_celestial_network_mini.PNG') center/cover no-repeat; min-height:90vh}
+  header.hero{background:url('salon_business_celestial_network_mini.jpg') center/cover no-repeat; min-height:90vh}
 }
 
 /* =========================
