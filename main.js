@@ -120,7 +120,7 @@
     { "fullName": "Anne-Marie BIALY", "sector": "Communication/Marketing/Commerce", "photo": "photos/Anne-Marie BIALY.jpeg", "role": "Fondatrice du mouvement 'Vase d'Honneur' et créatrice de contenu" },
     { "fullName": "Prince Israel KOYA", "sector": "Education/Formation", "photo": "photos/Prince Israël KOYA.jpeg", "role": "Enseignant Chercheur / Responsable EMUSA" },
     { "fullName": "Dominique DEPRI", "sector": "Santé/Social", "photo": "photos/Dominique DEPRI.jpeg", "role": "Travailleur sociale " },
-    { "fullName": "Roméo GBONGBON", "sector": "Numérique/Informatique/Nouvelles technologies", "photo": "photos/Roméo GBONGBON.jpeg", "role": "Développeur informatique" },
+    { "fullName": "Roméo GBONGBON", "sector": "Numérique/Informatique/Nouvelles technologies", "photo": "photos/Roméo GBONGBON.jpeg", "role": "Développeur FUll Stack" },
     { "fullName": "Marie LARCHER", "sector": "Musique/Théâtre/Comédie", "photo": "photos/Marie LARCHER.jpeg", "role": "Actrice" },
     { "fullName": "Victoire BLÉ", "sector": "Urbanisme / Aménagement du territoire / Administration publique", "photo": "photos/Victoire BLÉ.jpeg", "role": "Chargé d'urbanisme" },
     { "fullName": "Manuela Charlene MANANGA", "sector": "Beauté/Mode/Esthétique", "photo": "photos/Manuela Charlene MANANGA.png", "role": "Coiffeuse" },
@@ -154,7 +154,7 @@
     { "fullName": "Abiola PADONOU", "sector": "Diplomatie/coopération/aide au développement/analyse politique", "photo": "photos/Abiola PADONOU.jpeg", "role": "Expert en Art Oratoire" },
     { "fullName": "Thérèse ADJOVI", "sector": "BTP/Industries/Energie", "photo": "photos/Thérèse ADJOVI.jpeg", "role": "Ingénieur Génie Civil - Chargée d'études" },
     { "fullName": "Warren JEAN FRANÇOIS", "sector": "Communication/Marketing/Commerce", "photo": "photos/Warren JEAN FRANÇOIS.jpeg", "role": "Créateur de contenu" },
-    { "fullName": "Martin EKO NTOGHE", "sector": "Numérique/Informatique/Nouvelles technologies", "photo": "photos/Martin EKO NTOGHE .png", "role": "Ingénieur Génie Civil - Chargée d'études" },
+    { "fullName": "Martin EKO NTOGHE", "sector": "Numérique/Informatique/Nouvelles technologies", "photo": "photos/Martin EKO NTOGHE .png", "role": "Conseiller numérique - CD93" },
     { "fullName": "Loriane BORDIN", "sector": "BTP/Industries/Energie", "photo": "photos/Loriane BORDIN.jpeg", "role": "Architecte" },
     { "fullName": "Victoria AGBATO", "sector": "Restauration/Traiteur", "photo": "photos/Victoria AGBATO.png", "role": "Traiteur - Les Délices de Vicky" },
     { "fullName": "Francine BORDIN", "sector": "Fonction publique", "photo": "photos/Francine BORDIN.jpg", "role": "Inspectrice des Finances Publiques / Ancienne RH" }
