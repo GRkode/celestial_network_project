@@ -232,7 +232,6 @@
         "Dynos Delice",
         "LPB Le Petit Brunch",
         "Mamie Choco",
-        "NKS Hair – Coiffeuse",
         "Les Délices de Vicky"
     ]},
     { id: 2, title: "Jongler avec les chiffres" },
