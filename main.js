@@ -119,7 +119,6 @@
     { "fullName": "Jules MEFRE", "sector": "Immobilier", "photo": "photos/Jules MEFRÉ.png", "role": "Conseiller immobilier" },
     { "fullName": "Anne-Marie BIALY", "sector": "Communication/Marketing/Commerce", "photo": "photos/Anne-Marie BIALY.jpeg", "role": "Fondatrice du mouvement 'Vase d'Honneur' et créatrice de contenu" },
     { "fullName": "Prince Israel KOYA", "sector": "Education/Formation", "photo": "photos/Prince Israël KOYA.jpeg", "role": "Enseignant Chercheur / Responsable EMUSA" },
-    { "fullName": "Dominique DEPRI", "sector": "Santé/Social", "photo": "photos/Dominique DEPRI.jpeg", "role": "Travailleur sociale " },
     { "fullName": "Roméo GBONGBON", "sector": "Numérique/Informatique/Nouvelles technologies", "photo": "photos/Roméo GBONGBON.jpeg", "role": "Développeur FUll Stack" },
     { "fullName": "Marie LARCHER", "sector": "Musique/Théâtre/Comédie", "photo": "photos/Marie LARCHER.jpeg", "role": "Actrice" },
     { "fullName": "Victoire BLÉ", "sector": "Urbanisme / Aménagement du territoire / Administration publique", "photo": "photos/Victoire BLÉ.jpeg", "role": "Chargé d'urbanisme" },
