@@ -153,7 +153,7 @@
     { "fullName": "Bartel MBOUMBA", "sector": "Communication/Marketing/Commerce", "photo": "photos/Bartel MBOUMBA.jpeg", "role": "Expert digital marketing" },
     { "fullName": "Abiola PADONOU", "sector": "Diplomatie/coopération/aide au développement/analyse politique", "photo": "photos/Abiola PADONOU.jpeg", "role": "Expert en Art Oratoire" },
     { "fullName": "Thérèse ADJOVI", "sector": "BTP/Industries/Energie", "photo": "photos/Thérèse ADJOVI.jpeg", "role": "Ingénieur Génie Civil - Chargée d'études" },
-    { "fullName": "Warren JEAN FRANÇOIS", "sector": "Communication/Marketing/Commerce", "photo": "photos/Warren JEAN FRANÇOIS.jpeg", "role": "Créateur de contenu" },
+    { "fullName": "Warren JEAN FRANÇOIS", "sector": "Communication/Marketing/Commerce", "photo": "photos/Warren JEAN FRANÇOIS.jpg", "role": "Créateur de contenu" },
     { "fullName": "Martin EKO NTOGHE", "sector": "Numérique/Informatique/Nouvelles technologies", "photo": "photos/Martin EKO NTOGHE .png", "role": "Conseiller numérique - CD93" },
     { "fullName": "Loriane BORDIN", "sector": "BTP/Industries/Energie", "photo": "photos/Loriane BORDIN.jpeg", "role": "Architecte" },
     { "fullName": "Victoria AGBATO", "sector": "Restauration/Traiteur", "photo": "photos/Victoria AGBATO.png", "role": "Traiteur - Les Délices de Vicky" },
