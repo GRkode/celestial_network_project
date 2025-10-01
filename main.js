@@ -49,13 +49,7 @@
   function renderProgramTabs() {
     if (!$tabs) return;
     $tabs.innerHTML = PROGRAM_DAYS.map((d, i) => (
-      `<li class="nav-item" role="presentation">
-        <button class="nav-link ${i === 0 ? "active" : ""}"
-          id="${d.id}-tab" data-bs-toggle="tab" data-bs-target="#${d.id}"
-          type="button" role="tab" aria-controls="${d.id}" aria-selected="${i === 0}">
-          ${d.label || "Programme"}
-        </button>
-      </li>`
+      ``
     )).join("");
   }
   function renderProgramPanels() {

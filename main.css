@@ -165,7 +165,7 @@ footer {
 }
 
 .schedule-tabs .nav-link.active {
-  background: var(--brand);
+  background: #0c00965b;
   color: #fff;
   position: relative
 }
@@ -178,7 +178,7 @@ footer {
   bottom: -8px;
   width: 14px;
   height: 14px;
-  background: var(--brand);
+  background: #0c00965b;
   clip-path: polygon(50% 100%, 0 0, 100% 0)
 }
 
@@ -308,12 +308,12 @@ footer {
 }
 
 .youth-block {
-  background: #0c00965b;
+  background: #0c009685;
   color: #fff
 }
 
 .adult-block {
-  background: #b51a1d48;
+  background: #b51a1d7a;
   color: #fff
 }
 
