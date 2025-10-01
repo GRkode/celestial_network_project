@@ -308,12 +308,12 @@ footer {
 }
 
 .youth-block {
-  background: #0C0096;
+  background: #0c00965b;
   color: #fff
 }
 
 .adult-block {
-  background: #B51A1D;
+  background: #b51a1d48;
   color: #fff
 }
 
@@ -611,4 +611,10 @@ footer {
     background-image: url("Page s'inscrire sur mobile.png");
     background-position: center;
   }
+}
+
+.inscription-overlay {
+  background: rgba(0, 0, 0, 0.55); /* noir transparent pour contraster avec l'image */
+  border-radius: 12px;
+  max-width: 600px; /* limite la largeur du bloc */
 }
